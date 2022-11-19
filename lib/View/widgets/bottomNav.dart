@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 ValueNotifier<int> valueNotifierindex = ValueNotifier(0);
 
@@ -12,23 +13,23 @@ class BottomNAvigation extends StatelessWidget {
         builder: (context, int newindex, _) {
           return BottomNavigationBar(
               type: BottomNavigationBarType.fixed,
-              backgroundColor: Colors.black,
-              selectedItemColor: Colors.white,
+              backgroundColor: Colors.white,
+              selectedItemColor: const Color.fromARGB(255, 89, 89, 209),
               unselectedItemColor: Colors.grey,
               currentIndex: newindex,
               onTap: (value) {
                 valueNotifierindex.value = value;
               },
-              items: const [
-                BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+              items:   const [
+                BottomNavigationBarItem(icon: Icon(Iconsax.home4,) , label: 'home'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.collections), label: 'People'),
+                    icon: Icon(Iconsax.people4), label: 'People'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.home), label: 'Create'),
+                    icon: Icon(Iconsax.add_square), label: 'Create'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.download), label: 'Activity'),
+                    icon: Icon(Iconsax.heart), label: 'Activity'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.download), label: 'Profile')
+                    icon: Icon(Iconsax.profile_add), label: 'Profile')
               ]);
         });
   }

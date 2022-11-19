@@ -20,7 +20,6 @@ List data=     jsonDecode(response.body);
 
 for(var i in data){
 
-  print(i);
 
  User user=   User.fromJson(i);
 collections.add(user);
