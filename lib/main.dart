@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:userdetails/View/Pages/listUsers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +10,6 @@ void main() {
  
    @override
    Widget build(BuildContext context) {
-     return Container();
+     return MaterialApp(home: UserList());
    }
  }
