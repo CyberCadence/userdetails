@@ -26,8 +26,7 @@ class UserPageList extends StatelessWidget {
           actions: [
             IconButton(
                 onPressed: () {},
-                icon: const Icon(Iconsax.notification,
-                    color: Colors.black)),
+                icon: const Icon(Iconsax.notification, color: Colors.black)),
             IconButton(
                 onPressed: () {},
                 icon: const Icon(
@@ -96,8 +95,7 @@ Widget UserListWidget(List<User> data, BuildContext context) {
             ),
             subtitle: Text(
               userdata.email.toString(),
-              style:
-                  const TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
+              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
             ),
             trailing: TextButton(
                 style: TextButton.styleFrom(
@@ -130,3 +128,52 @@ Widget UserListWidget(List<User> data, BuildContext context) {
         itemCount: data.length),
   );
 }
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+        body: Center(
+      child: Text('HomePage  switch to people tab'),
+    ));
+  }
+}
+
+class CreataPage extends StatelessWidget {
+  const CreataPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+        body: Center(
+      child: Text('Page  switch to people tab'),
+    ));
+  }
+}
+
+class ActivityPage extends StatelessWidget {
+  const ActivityPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+        body: Center(
+      child: Text('Activitypage  switch to people tab'),
+    ));
+  }
+}
+
+class Profilepage extends StatelessWidget {
+  const Profilepage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+        body: Center(
+      child: Text('Profilepage  switch to people tab'),
+    ));
+  }
+}
+

@@ -6,11 +6,13 @@ import 'package:userdetails/View/Pages/listUsers.dart';
 import 'package:userdetails/View/widgets/bottomNav.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(  MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+    MyApp({super.key});
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +25,16 @@ class MyApp extends StatelessWidget {
       )),
       home: BlocProvider<ApiBloc>(
         create: (context) => ApiBloc(repository: Repository()),
-        child: const Scaffold(body: UserPageList(),
+        child:   Scaffold(body: ValueListenableBuilder(
+          valueListenable: valueNotifierindex, builder: (context, int value, child) 
+          {
+          return pages[value];  
+          },),
         bottomNavigationBar: BottomNAvigation(),),
       ),
     );
   }
+
+final pages=[  HomePage(), UserPageList(),CreataPage(),ActivityPage(),Profilepage()];
+
 }

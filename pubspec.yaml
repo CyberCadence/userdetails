@@ -35,6 +35,7 @@ dependencies:
   flutter_bloc: ^8.1.1
   http: ^0.13.5
   iconsax: ^0.0.8
+  
 
 dev_dependencies:
   flutter_lints: ^2.0.0
